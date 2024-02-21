@@ -24,6 +24,7 @@ body{
     width:100%;
     background-color:#09090b;
     color:#fafafa;
+      font-family: "Roboto", sans-serif;
 
 }
 
@@ -43,6 +44,7 @@ body{
     justify-content:center;
     align-items:center;
 }
+
 a{
     color:inherit;
     text-decoration:none
