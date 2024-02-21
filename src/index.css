@@ -1,19 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  * {
-    @apply box-border;
-  }
-  body {
-    @apply h-full overflow-x-hidden bg-zinc-950 text-zinc-50;
-  }
-  html {
-    @apply h-full;
-  }
-}
-
 ::-webkit-scrollbar {
   width: 0.45rem;
 }
