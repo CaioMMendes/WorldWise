@@ -24,7 +24,7 @@ body{
     width:100%;
     background-color:#09090b;
     color:#fafafa;
-      font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
 
 }
 
@@ -50,8 +50,17 @@ a{
     text-decoration:none
 }
 
+ul{
+  list-style:none;
+}
+li{
+  list-style:none;
+}
+
 *{
     box-sizing:border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
