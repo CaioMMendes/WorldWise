@@ -11,6 +11,7 @@ import PricingPage from "./pages/pricing.tsx";
 import ProductPage from "./pages/product.tsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import NotFoundPage from "./pages/not-found.tsx";
+import AppLayout from "./pages/app-layout.tsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/product",
         element: <ProductPage />,
+      },
+      {
+        path: "/app",
+        element: <AppLayout />,
       },
     ],
   },
