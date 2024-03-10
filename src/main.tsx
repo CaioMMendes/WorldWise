@@ -12,6 +12,7 @@ import ProductPage from "./pages/product.tsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import NotFoundPage from "./pages/not-found.tsx";
 import AppLayout from "./pages/app-layout.tsx";
+import CitiesPage from "./pages/cities.tsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,12 @@ const router = createBrowserRouter([
       {
         path: "/app",
         element: <AppLayout />,
+        children: [
+          {
+            path: "cities",
+            element: <CitiesPage />,
+          },
+        ],
       },
     ],
   },
