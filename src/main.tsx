@@ -13,6 +13,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import NotFoundPage from "./pages/not-found.tsx";
 import AppLayout from "./pages/app-layout.tsx";
 import CitiesPage from "./pages/cities.tsx";
+import Countries from "./pages/countries.tsx";
+import Form from "./pages/form.tsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
           {
             path: "cities",
             element: <CitiesPage />,
+          },
+          {
+            path: "countries",
+            element: <Countries />,
+          },
+          {
+            path: "form",
+            element: <Form />,
           },
         ],
       },
