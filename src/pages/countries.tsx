@@ -1,5 +1,5 @@
 const Countries = () => {
-  return <div>dasda</div>;
+  return <div>countries</div>;
 };
 
 export default Countries;

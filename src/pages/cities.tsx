@@ -1,5 +1,5 @@
 const CitiesPage = () => {
-  return <div>asdasd</div>;
+  return <div>cities</div>;
 };
 
 export default CitiesPage;
