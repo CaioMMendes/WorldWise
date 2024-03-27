@@ -35,23 +35,20 @@ const fetchFunction = async <T, R>({
 
   try {
     if (type === "get" || type === "delete") {
-      const response: AxiosResponse<R> = await axios[type](
-        `${apiUrl}/api/v1${url}`,
-        {
-          signal,
-          headers: {
-            "content-Type": "application/json",
-            "Access-Control-Allow-Credentials": "true",
-          },
-          withCredentials: true,
-          ...options,
+      const response: AxiosResponse<R> = await axios[type](`${apiUrl}/${url}`, {
+        signal,
+        headers: {
+          "content-Type": "application/json",
+          "Access-Control-Allow-Credentials": "true",
         },
-      );
+        withCredentials: true,
+        ...options,
+      });
       return response.data;
     }
 
     const response: AxiosResponse<R> = await axios[type](
-      `${apiUrl}/api/v1${url}`,
+      `${apiUrl}/${url}`,
       body,
       {
         signal,
@@ -61,7 +58,7 @@ const fetchFunction = async <T, R>({
         },
         withCredentials: true,
         ...options,
-      },
+      }
     );
     return response.data;
   } catch (error) {
