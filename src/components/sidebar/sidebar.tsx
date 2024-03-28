@@ -1,20 +1,27 @@
-import styled from "styled-components";
-import logo from "/logo.png";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import styled, { css } from "styled-components";
 import Button from "../button";
-import { Link, Outlet } from "react-router-dom";
+import logo from "/logo.png";
 
 const Sidebar = () => {
+  const { pathname } = useLocation();
+
   return (
     <SidebarContainer>
       <SideMain>
         <img src={logo} alt="Logo image" />
         <ButtonsContainer>
-          <Link to="/app/cities">
+          <CustomNavLink
+            to="/app/cities"
+            className={
+              pathname === "/app" || pathname === "/app/" ? "active" : ""
+            }
+          >
             <Button variant="primary">CITIES</Button>
-          </Link>
-          <Link to="/app/countries">
+          </CustomNavLink>
+          <CustomNavLink to="/app/countries">
             <Button variant="primary">COUNTRIES</Button>
-          </Link>
+          </CustomNavLink>
         </ButtonsContainer>
         <Outlet />
       </SideMain>
@@ -24,6 +31,18 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+const CustomNavLink = styled(NavLink)`
+  ${({ theme }) => {
+    return css`
+      &.active {
+        button {
+          background-color: ${theme.colors.primary_opacity};
+        }
+      }
+    `;
+  }}
+`;
 
 const SidebarContainer = styled.div`
   display: flex;
